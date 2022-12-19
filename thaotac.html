@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>thao tac với mảng</title>
+        <h3>sample screen</h3>
+    </head>
+    
+    <body>  
+        <input type="text" id="Value"/>
+        <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+        <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+        <div id="result"></div> 
+    <script>  
+    var x =0;
+    var array = Array();
+    function add_element_to_array() {
+    array[x] = document.getElementById("Value").value;
+    alert("Element: " + array[x] + " Added at index " + x);
+    x++;
+    document.getElementById("Value ").value = "";
+    }
+    function display_array() {
+        var e = "<hr/>";
+        for (i = 0; i < array.length; i++) {
+        e += "Element " + i + " = " + array[i] + "<br/>";
+    }
+    document.getElementById("result").innerHTML = e;
+}
+    </script>      
+    </body>
+</html>

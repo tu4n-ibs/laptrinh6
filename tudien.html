@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>tra từ điển </title>
+            <link rel="stylesheet" href="tudien.css">
+        </head>
+    <body>
+        <thead>
+            <p id="box">Nhập từ:
+            &ensp; <input type="text" id="string"> 
+            &ensp; <button  onclick="messi()">Dịch</button></p> <hr width="400px">
+            <p id="giatri"></p>
+        </thead>
+        <script>
+            function messi() {
+                var eng = ["chicken", "why", "what", "pen", "hello", "book", "messi"];
+                var vie = ["gà gà", "tại sao", "cái gì", "bút", "xin chào", "sách", "vô địch"];
+                var string = document.getElementById("string").value;
+                var simpleng = 0;
+                var ketqua = "";
+                    for (var i = 0; i < eng.length; i++) {
+                        if (string == eng[i]) {
+                          simpleng = i;
+                            for (var j = 0; j < vie.length; j++) {
+                                if ( simpleng == j) {
+                                   ketqua = vie[j];
+                                }
+                            }
+                        }        
+                    }
+                 document.getElementById("giatri").innerHTML= ketqua;
+            }
+        </script>
+    </body>
+</html>
